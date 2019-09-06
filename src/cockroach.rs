@@ -1,29 +1,44 @@
+//! Temporary CockroachDB.
+
 extern crate postgres;
 extern crate tempdir;
 
 use std::error::Error;
 use std::process::Child;
 use std::process::Command;
-use std::thread::sleep;
 use std::time::Duration;
 
 use postgres::Connection;
 use postgres::TlsMode;
 use tempdir::TempDir;
 
+/// A temporary CockroachDB instance.
+///
+/// Spawns a single-node CockroachDB instance in a subprocess, storing all data
+/// in a temporary directory. Both the subprocess and temporary directory are
+/// cleaned up when the `TempCockroach` object goes out of scope.
+///
+/// **Prerequisite:** The `cockroach` binary must be installed on your path.
+/// Download it [here](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html).
 pub struct TempCockroach {
+    /// Temporary directory where cockroach stores all its data.
     #[allow(dead_code)]
     tempdir: TempDir,
 
+    /// Cockroach subprocess.
     process: Child,
 
+    /// Database connection string.
     url: String,
 }
 
 impl TempCockroach {
+    /// Create a new temporary CockroachDB instance.
     pub fn new() -> Result<Self, Box<Error>> {
+        // Create the store directory.
         let tempdir = TempDir::new("cockroach-data")?;
 
+        // Spawn the cockroach subprocess.
         let url_file = tempdir.path().join("url");
         let process = Command::new("cockroach")
             .arg("start")
@@ -35,11 +50,15 @@ impl TempCockroach {
             .arg(format!("--store={}", tempdir.path().display()))
             .spawn()?;
 
+        // Wait for the URL file to be written.
         let mut url: String;
         loop {
             if url_file.exists() {
                 match std::fs::read_to_string(url_file.clone()) {
                     Ok(s) => {
+                        // Cockroach doesn't write the URL file atomically, so
+                        // we look for the trailing newline to tell when it's
+                        // complete.
                         if s.contains("\n") {
                             url = s.trim().to_string();
                             break;
@@ -48,20 +67,22 @@ impl TempCockroach {
                     Err(_) => {}
                 };
             }
-            sleep(Duration::from_millis(10));
+            std::thread::sleep(Duration::from_millis(10));
         }
 
-        // Create test database and user.
+        // Create test database.
         let conn = Connection::connect(url.clone(), TlsMode::None)?;
         conn.execute("CREATE DATABASE test", &[])?;
+        url = url.replace("?sslmode=disable", "/test?sslmode=disable");
 
         Result::Ok(TempCockroach {
             tempdir: tempdir,
             process: process,
-            url: url.replace("?sslmode=disable", "/test?sslmode=disable"),
+            url: url,
         })
     }
 
+    /// Get the database connection string.
     pub fn url(&self) -> &String {
         &self.url
     }

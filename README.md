@@ -2,7 +2,7 @@
 
 [![Documentation](https://docs.rs/tempdb/badge.svg)](https://docs.rs/tempdb) [![Latest Version](https://img.shields.io/crates/v/tempdb.svg)](https://crates.io/crates/tempdb) [![Build Status](https://api.travis-ci.org/calder/rust-tempdb.svg?branch=master)](https://travis-ci.org/calder/rust-tempdb) [![Coverage Stats](https://codecov.io/gh/calder/rust-tempdb/branch/master/graph/badge.svg)](https://codecov.io/gh/calder/rust-tempdb)
 
-Temporary databases for unit testing against.
+Temporary databases for unit testing.
 
 ## Usage
 
