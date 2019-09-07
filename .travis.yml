@@ -22,8 +22,8 @@ env:
     - RUST_BACKTRACE=1
 
 install: |
-  wget -qO- https://binaries.cockroachdb.com/cockroach-v19.1.4.linux-amd64.tgz | tar xvz
-  cp -i cockroach-v19.1.4.linux-amd64/cockroach /usr/local/bin
+  wget -O - https://binaries.cockroachdb.com/cockroach-v19.1.4.linux-amd64.tgz | tar xvz
+  sudo cp -i cockroach-v19.1.4.linux-amd64/cockroach /usr/local/bin
 
 before_cache: |
   rm -rf "$TRAVIS_HOME/.cargo/registry/src"
