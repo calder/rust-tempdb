@@ -16,5 +16,5 @@ exclude = [
 ]
 
 [dependencies]
-postgres = ""
-tempfile = ""
+postgres = "0.15"
+tempfile = "3"
