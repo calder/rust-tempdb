@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/calder/rust-tempdb.svg?branch=master)](https://travis-ci.org/calder/rust-tempdb) [![Coverage Status](https://coveralls.io/repos/github/calder/rust-tempdb/badge.svg?branch=master)](https://coveralls.io/github/calder/rust-tempdb?branch=master)
 
 Temporary databases for unit testing, inspired by [`tempfile`](https://docs.rs/tempfile).
-* [`tempdb_cockroach`](tempdb_cockroach) - Single-node [CockroachDB](https://www.cockroachlabs.com) instances.
+| --- | --- | --- |
+| <a href="https://cockroachlabs.com"><img src="doc/logo.png" width="12" height="12"></a> [`tempdb_cockroach`](tempdb_cockroach) | [![Documentation](https://docs.rs/tempdb_cockroach/badge.svg)](https://docs.rs/tempdb_cockroach) | [![Latest Version](https://img.shields.io/crates/v/tempdb_cockroach.svg)](https://crates.io/crates/tempdb_cockroach) |
 
 ## Example usage
 
