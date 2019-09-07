@@ -5,5 +5,5 @@ authors = ["Calder Coalson <Calder.Coalson@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-tempdir = ""
+tempfile = ""
 postgres = ""

@@ -20,4 +20,4 @@ for crate in tempdb_cockroach; do
     popd
 done
 
-echo "Presubmits ${GREEN}PASSED${RESET}.\n"
+printf "Presubmits ${GREEN}PASSED${RESET}.\n\n"
