@@ -6,8 +6,9 @@ Temporary [CockroachDB](https://www.cockroachlabs.com) databases for unit testin
 
 ## Installation
 
-Add the following to the `[dev-dependencies]` section your `Cargo.toml`:
+Add the following to your `Cargo.toml`:
 ```
+[dev-dependencies]
 tempdb_cockroach = ""
 ```
 
