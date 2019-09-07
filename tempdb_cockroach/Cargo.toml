@@ -1,9 +1,21 @@
 [package]
 name = "tempdb_cockroach"
+description = "Temporary databases for unit testing"
+keywords = ["temporary", "database", "test", "library", "cockroach", "cockroachdb", "postgres", "postgresql", "sql"]
 version = "0.1.0"
-authors = ["Calder Coalson <Calder.Coalson@gmail.com>"]
 edition = "2018"
+documentation = "https://docs.rs/tempdb_cockroach"
+repository = "https://github.com/calder/rust-tempdb"
+readme = "README.md"
+license = "MIT"
+license-file = "LICENSE"
+authors = ["Calder Coalson <caldercoalson@gmail.com>"]
+
+exclude = [
+  "/.travis.yml",
+  "/scripts",
+]
 
 [dependencies]
-tempfile = ""
 postgres = ""
+tempfile = ""
