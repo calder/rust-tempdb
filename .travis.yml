@@ -23,7 +23,7 @@ env:
 
 install: |
   wget -O - https://binaries.cockroachdb.com/cockroach-latest.linux-amd64.tgz | tar xvz
-  sudo cp -i cockroach-latest.linux-amd64/cockroach /usr/local/bin
+  sudo cp cockroach-*.linux-amd64/cockroach /usr/local/bin
 
 before_cache: |
   rm -rf "$TRAVIS_HOME/.cargo/registry/src"

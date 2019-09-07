@@ -20,7 +20,7 @@ sudo apt install libpq-dev
 [Install cockroach](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html) if you haven't already:
 ```sh
 wget -qO- https://binaries.cockroachdb.com/cockroach-latest.linux-amd64.tgz | tar -xvz
-sudo cp -i cockroach-latest.linux-amd64/cockroach /usr/local/bin
+sudo cp cockroach-*.linux-amd64/cockroach /usr/local/bin
 ```
 
 ## Usage
