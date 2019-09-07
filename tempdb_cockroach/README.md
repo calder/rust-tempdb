@@ -1,6 +1,6 @@
 # <a href="https://cockroachlabs.com"><img src="https://github.com/calder/rust-tempdb/raw/master/tempdb_cockroach/doc/logo.svg" width="24" height="24"></a> Rust TempDB - [CockroachDB](https://www.cockroachlabs.com)
 
-[![Documentation](https://docs.rs/tempdb_cockroach/badge.svg)](https://docs.rs/tempdb_cockroach) [![Latest Version](https://img.shields.io/crates/v/tempdb_cockroach.svg)](https://crates.io/crates/tempdb_cockroach)
+[![Documentation](https://raw.githubusercontent.com/calder/rust-tempdb/master/tempdb_cockroach/doc/logo.png)](https://docs.rs/tempdb_cockroach) [![Latest Version](https://img.shields.io/crates/v/tempdb_cockroach.svg)](https://crates.io/crates/tempdb_cockroach)
 
 Temporary [CockroachDB](https://www.cockroachlabs.com) databases for unit testing.
 
