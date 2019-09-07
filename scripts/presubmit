@@ -18,9 +18,9 @@ cargo fmt -- --check \
 
 cargo test
 
-check_readme README.md tempdb_cockroach/tests/usage.rs "Example usage"
+check_readme README.md tempdb_cockroach/tests/readme_usage.rs "Example usage"
 for crate in tempdb_cockroach; do
-    check_readme $crate/README.md $crate/tests/usage.rs "Usage"
+    check_readme $crate/README.md $crate/tests/readme_usage.rs "Usage"
 done
 
 printf "\nPresubmits ${GREEN}PASSED${RESET}.\n"
