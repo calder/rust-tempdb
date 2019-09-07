@@ -3,9 +3,7 @@
 [![Build Status](https://api.travis-ci.org/calder/rust-tempdb.svg?branch=master)](https://travis-ci.org/calder/rust-tempdb) [![Coverage Stats](https://codecov.io/gh/calder/rust-tempdb/branch/master/graph/badge.svg)](https://codecov.io/gh/calder/rust-tempdb)
 
 Temporary databases for unit testing, inspired by [`tempfile`](https://docs.rs/tempfile).
-
-Crates:
-* [`tempdb_cockroach`](tempdb_cockroach) - Single-node [CockroachDB](https://www.cockroachlabs.com) instances.
+* [`tempdb_cockroach`](tempdb_cockroach)
 
 ## Contributing
 
