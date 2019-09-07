@@ -1,7 +1,7 @@
 //! Temporary [CockroachDB](https://www.cockroachlabs.com) databases for unit
 //! testing.
 //!
-//! **Prerequisite:** The `cockroach` binary must be installed on your path.
+//! **Note:** The `cockroach` binary must be installed on your path.
 //! Download it [here](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html).
 //!
 //! # Example
