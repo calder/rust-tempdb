@@ -4,6 +4,13 @@
 
 Temporary [CockroachDB](https://www.cockroachlabs.com) databases for unit testing.
 
+## Installation
+
+Add the following to the `[dev-dependencies]` section your `Cargo.toml`:
+```
+tempdb_cockroach = ""
+```
+
 ## Usage
 
 ```rust
