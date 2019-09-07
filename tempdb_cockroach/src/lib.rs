@@ -51,7 +51,7 @@ pub struct TempCockroach {
 
 impl TempCockroach {
     /// Create a new temporary CockroachDB instance.
-    pub fn new() -> Result<Self, Box<Error>> {
+    pub fn new() -> Result<Self, Box<dyn Error>> {
         // Create the store directory.
         let tempdir = TempDir::new()?;
 
