@@ -12,10 +12,15 @@ Add the following to your `Cargo.toml`:
 tempdb_cockroach = ""
 ```
 
+Install `libpq-dev` (required by the [`postgres`](https://docs.rs/postgres/) crate):
+```sh
+sudo apt install libpq-dev
+```
+
 [Install cockroach](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html) if you haven't already:
 ```sh
 wget -qO- https://binaries.cockroachdb.com/cockroach-latest.linux-amd64.tgz | tar -xvz
-cp -i cockroach-latest.linux-amd64/cockroach /usr/local/bin
+sudo cp -i cockroach-latest.linux-amd64/cockroach /usr/local/bin
 ```
 
 ## Usage
