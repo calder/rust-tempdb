@@ -14,8 +14,8 @@ tempdb_cockroach = ""
 
 [Install cockroach](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html) if you haven't already:
 ```sh
-wget -qO- https://binaries.cockroachdb.com/cockroach-v19.1.4.linux-amd64.tgz | tar -xvz
-cp -i cockroach-v19.1.4.linux-amd64/cockroach /usr/local/bin
+wget -qO- https://binaries.cockroachdb.com/cockroach-latest.linux-amd64.tgz | tar -xvz
+cp -i cockroach-latest.linux-amd64/cockroach /usr/local/bin
 ```
 
 ## Usage
