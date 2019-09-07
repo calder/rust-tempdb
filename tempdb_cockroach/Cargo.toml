@@ -1,6 +1,6 @@
 [package]
 name = "tempdb_cockroach"
-version = "1.0.6"
+version = "1.0.7"
 edition = "2018"
 description = "Temporary databases for unit testing"
 keywords = ["cockroach", "cockroachdb", "temporary", "database", "test"]
