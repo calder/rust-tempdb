@@ -1,4 +1,4 @@
-# ![💾](doc/logo.png) Rust TempDB - [CockroachDB](https://www.cockroachlabs.com)
+# ![💾](doc/logo.png | width=16) Rust TempDB - [CockroachDB](https://www.cockroachlabs.com)
 
 [![Documentation](https://docs.rs/tempdb_cockroach/badge.svg)](https://docs.rs/tempdb_cockroach) [![Latest Version](https://img.shields.io/crates/v/tempdb_cockroach.svg)](https://crates.io/crates/tempdb_cockroach)
 
