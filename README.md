@@ -1,6 +1,6 @@
 # 💾 Rust TempDB
 
-[![Build Status](https://api.travis-ci.org/calder/rust-tempdb.svg?branch=master)](https://travis-ci.org/calder/rust-tempdb) [![Coverage Status](https://coveralls.io/repos/github/calder/rust-tempdb/badge.svg?branch=master)](https://coveralls.io/github/calder/rust-tempdb?branch=master)
+[![Build Status](https://travis-ci.org/calder/rust-tempdb.svg?branch=master)](https://travis-ci.org/calder/rust-tempdb) [![Coverage Status](https://coveralls.io/repos/github/calder/rust-tempdb/badge.svg?branch=master)](https://coveralls.io/github/calder/rust-tempdb?branch=master)
 
 Temporary databases for unit testing, inspired by [`tempfile`](https://docs.rs/tempfile).
 * [`tempdb_cockroach`](tempdb_cockroach) - Single-node [CockroachDB](https://www.cockroachlabs.com) instances.
