@@ -1,6 +1,9 @@
 //! Temporary [CockroachDB](https://www.cockroachlabs.com) databases for unit
 //! testing.
 //!
+//! **Prerequisite:** The `cockroach` binary must be installed on your path.
+//! Download it [here](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html).
+//!
 //! # Example
 //!
 //! ```rust
@@ -34,9 +37,6 @@ use tempfile::TempDir;
 /// Spawns a single-node CockroachDB instance in a subprocess, storing all data
 /// in a temporary directory. Both the subprocess and temporary directory are
 /// cleaned up when the `TempCockroach` object goes out of scope.
-///
-/// **Prerequisite:** The `cockroach` binary must be installed on your path.
-/// Download it [here](https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html).
 pub struct TempCockroach {
     /// Temporary directory where cockroach stores all its data.
     #[allow(dead_code)]
@@ -57,6 +57,7 @@ impl TempCockroach {
 
         // Spawn the cockroach subprocess.
         let url_file = tempdir.path().join("url");
+
         let process = Command::new("cockroach")
             .arg("start")
             .arg("--insecure")
@@ -65,7 +66,8 @@ impl TempCockroach {
             .arg("--http-port=0")
             .arg(format!("--listening-url-file={}", url_file.display()))
             .arg(format!("--store={}", tempdir.path().display()))
-            .spawn()?;
+            .spawn()
+            .map_err(|e| format!("Failed to start cockroach: {}. Did you remember to install it? See https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html for installation instructions.", e.description()))?;
 
         // Wait for the URL file to be written.
         let mut url: String;
