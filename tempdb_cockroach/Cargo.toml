@@ -1,0 +1,9 @@
+[package]
+name = "tempdb_cockroach"
+version = "0.1.0"
+authors = ["Calder Coalson <Calder.Coalson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tempdir = ""
+postgres = ""

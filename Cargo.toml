@@ -1,9 +1,4 @@
-[package]
-name = "tempdb"
-version = "0.1.0"
-authors = ["Calder Coalson <Calder.Coalson@spacex.com>"]
-edition = "2018"
-
-[dependencies]
-tempdir = ""
-postgres = ""
+[workspace]
+members = [
+    "tempdb_cockroach",
+]

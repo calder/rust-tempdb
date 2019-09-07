@@ -1,19 +1,23 @@
-#!/bin/sh
+#!/bin/bash -ex
 
-cd "`dirname "$0"`/.."
+cd "$(dirname "$0")/.."
 
 # Colors
-RED=`tput setaf 1`
-GREEN=`tput setaf 2`
-RESET=`tput sgr0`
+RED="$(tput setaf 1)"
+GREEN="$(tput setaf 2)"
+RESET="$(tput sgr0)"
 
 cargo fmt -- --check \
     || { echo "\n${RED}ERROR${RESET}: Must run \`cargo fmt\` before submitting."; exit 1; }
 
-cargo test || exit 1
+cargo test
 
-perl -0777 -pe 's/.*## Usage\n\n```rust\n(.*)```.*/$1/s' README.md \
-    | colordiff tests/usage.rs - \
-    || { echo "\n${RED}ERROR${RESET}: Usage in README.md differs from tests/usage.rs."; exit 1; }
+for crate in tempdb_cockroach; do
+    pushd $crate
+    perl -0777 -pe 's/.*## Usage\n\n```rust\n(.*)```.*/$1/s' README.md \
+        | colordiff tests/usage.rs - \
+        || { echo "\n${RED}ERROR${RESET}: Usage in $package/README.md differs from $package/tests/usage.rs."; exit 1; }
+    popd
+done
 
 echo "Presubmits ${GREEN}PASSED${RESET}.\n"
