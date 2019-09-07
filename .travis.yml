@@ -17,6 +17,10 @@ addons:
       - libpq-dev
       - libssl-dev
 
+install: |
+  wget -qO- https://binaries.cockroachdb.com/cockroach-v19.1.4.linux-amd64.tgz | tar xvz
+  cp -i cockroach-v19.1.4.linux-amd64/cockroach /usr/local/bin
+
 before_cache: |
   rm -rf "$TRAVIS_HOME/.cargo/registry/src"
   if [[ "$TRAVIS_RUST_VERSION" == stable ]]; then
