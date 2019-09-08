@@ -6,7 +6,7 @@ Temporary databases for unit testing, inspired by [`tempfile`](https://docs.rs/t
 
 | Database | Crate | Documentation | Latest |
 | --- | --- | --- | --- |
-| <a href="https://cockroachlabs.com"><img src="https://raw.githubusercontent.com/calder/rust-tempdb/master/tempdb-cockroach/doc/logo.png" width="12" height="12"> CockroachDB</a> | [`tempdb-cockroach`](tempdb-cockroach) | [![Documentation](https://docs.rs/tempdb-cockroach/badge.svg)](https://docs.rs/tempdb-cockroach) | [![Latest Version](https://img.shields.io/crates/v/tempdb-cockroach.svg)](https://crates.io/crates/tempdb-cockroach) |
+| <a href="https://cockroachlabs.com"><img src="https://raw.githubusercontent.com/calder/rust-tempdb/master/tempdb_cockroach/doc/logo.png" width="12" height="12"> CockroachDB</a> | [`tempdb_cockroach`](tempdb_cockroach) | [![Documentation](https://docs.rs/tempdb_cockroach/badge.svg)](https://docs.rs/tempdb_cockroach) | [![Latest Version](https://img.shields.io/crates/v/tempdb_cockroach.svg)](https://crates.io/crates/tempdb_cockroach) |
 
 ## Example usage
 

@@ -1,4 +1,4 @@
 [workspace]
 members = [
-    "tempdb-cockroach",
+    "tempdb_cockroach",
 ]
