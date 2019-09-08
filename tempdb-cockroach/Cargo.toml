@@ -1,10 +1,10 @@
 [package]
-name = "tempdb_cockroach"
+name = "tempdb-cockroach"
 version = "1.0.7"
 edition = "2018"
 description = "Temporary databases for unit testing"
 keywords = ["cockroach", "cockroachdb", "temporary", "database", "test"]
-documentation = "https://docs.rs/tempdb_cockroach"
+documentation = "https://docs.rs/tempdb-cockroach"
 repository = "https://github.com/calder/rust-tempdb"
 readme = "README.md"
 license = "MIT"
