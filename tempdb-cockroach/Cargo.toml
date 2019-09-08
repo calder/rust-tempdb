@@ -11,9 +11,9 @@ license = "MIT"
 authors = ["Calder Coalson <caldercoalson@gmail.com>"]
 
 exclude = [
-  ".travis.yml",
-  "doc",
-  "scripts",
+  "/.travis.yml",
+  "/doc/**",
+  "/scripts/**",
 ]
 
 [dependencies]
