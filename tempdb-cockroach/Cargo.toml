@@ -1,6 +1,6 @@
 [package]
 name = "tempdb-cockroach"
-version = "1.0.7"
+version = "1.0.8"
 edition = "2018"
 description = "Temporary databases for unit testing"
 keywords = ["cockroach", "cockroachdb", "temporary", "database", "test"]
@@ -11,9 +11,9 @@ license = "MIT"
 authors = ["Calder Coalson <caldercoalson@gmail.com>"]
 
 exclude = [
-  "/.travis.yml",
-  "/doc",
-  "/scripts",
+  ".travis.yml",
+  "doc",
+  "scripts",
 ]
 
 [dependencies]
